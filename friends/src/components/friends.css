@@ -1,0 +1,17 @@
+.friend{ 
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.friend:hover{
+    color: red;
+    cursor: pointer;
+}
+
+h2{
+    text-align: center;
+    margin-left: -35rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
