@@ -14,7 +14,9 @@ class App extends Component {
   constructor (){
     super();
     this.state={
-      friends: []
+      friends: [],
+      editing: false,
+      key: '',
     };
   }
 
@@ -45,16 +47,40 @@ class App extends Component {
       .catch(err => {
         console.log(err);
       });
-
   };
+
+  edit = (id) =>{
+    console.log(this.state.editing);
+    this.setState({
+      key: id,
+      editing: !this.state.editing, 
+    })
+  
+  }
+
+  changeHandler = e => {
+    e.persist();
+    let value = e.target.value; 
+    this.setState({
+        friend: {...this.state.friend, [e.target.name]: value}
+    })
+}
+
+EditFriend = e => { 
+  this.setState({
+    
+  })
+}
+
 
   render() {
     return (
       <div className="App">
         <div className="header">
+          <div className="heading">Friends</div>
           <NavLink exact to="/new-friend"><button className="newFriend">+</button></NavLink>
         </div> 
-        {this.state.friends.map (friend => (<Friends friends={friend} name={friend.name} email={friend.email} id={friend.id} age={friend.age}/>))}
+        {this.state.friends.map (friend => (<Friends EditFriend = {this.EditFriend} number={this.state.key} changeHandler={this.changeHandler} friends={friend} name={friend.name} email={friend.email} id={friend.id} age={friend.age} editing={this.state.editing} edit={this.edit}/>))}
           <Route path="/new-friend" render={props => <FriendForm {...props} addItem={this.addItem} />}/> 
       </div>
     );
