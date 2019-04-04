@@ -5,9 +5,10 @@ import './friends.css';
 const Friends = props => {
     return (
         <div className="friend">
-            <h3>{props.friends.id}</h3>
-            <h2>{props.friends.name}</h2>
-            <h3>{props.friends.email}</h3>
+            <div className="id">{props.friends.id}</div>
+            <div className="name">{props.friends.name}</div>
+            <div className="email">{props.friends.email}</div>
+            <div className="age">{props.friends.age}</div> 
         </div>
     )
 }

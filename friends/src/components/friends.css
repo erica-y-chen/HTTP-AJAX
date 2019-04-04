@@ -3,15 +3,35 @@
     flex-direction: row; 
     justify-content: space-between;
     padding: 10px 40px;
+    max-width: 1000px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid grey;
+    
 }
 
 .friend:hover{
-    color: red;
+    font-style: italic;
     cursor: pointer;
 }
 
-h2{
-    text-align: center;
-    margin-left: -35rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.id{
+    text-align: left;
+}
+
+.name{
+    text-align: left;
+}
+
+.email{
+    text-align: left;
+    color: red;
+}
+
+.age{
+    text-align: left;
+
+}
+
+form{
+    margin-top: 30px;
 }
