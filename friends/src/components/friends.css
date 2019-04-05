@@ -1,0 +1,51 @@
+.friend{ 
+    display: flex;
+    flex-direction: row; 
+    padding: 20px 10px;
+    max-width: 1000px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 20px rgb(240, 240, 240);
+    border-radius: 10px;
+    
+}
+
+.friend:hover{
+    font-style: italic;
+    cursor: pointer;
+}
+
+.id{
+    text-align: left;
+    width: 10%;
+}
+
+.name{
+    text-align: left;
+    width: 30%;
+}
+
+.email{
+    text-align: left;
+    width: 40%;
+    color: red;
+}
+
+.age{
+    text-align: right;
+    width: 10%;
+
+}
+
+form{
+    margin-top: 30px;
+}
+
+.edit {
+    height: 20px;
+    width: auto;
+
+}
+
+.editIcon{
+    width: 10%;
+}
